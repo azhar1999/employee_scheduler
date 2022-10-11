@@ -1,0 +1,33 @@
+.firstbody{
+    display:flex;
+    flex-direction: row;
+}
+
+#secondemplabel{
+    margin-left: 10px;
+
+}
+
+#firstemp{
+    margin-left: 2px;
+}
+
+.meeting{
+    margin-left: 10px;
+}
+
+.submit{
+
+    background-color:red;
+    border: none;
+    text-align: center;
+    margin-left:10px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+

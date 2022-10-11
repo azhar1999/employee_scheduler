@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="meeting.css" rel="stylesheet">
+    <script src="meeting.js"></script>
+    <title>Meeting</title>
+</head>
+
+<body onload="loading()">
+    <div class="main">
+        <div class="firstbody">
+            <div class="firstemployee">
+                <label id ="firstemplabel">First Employee</label>
+                <select id="firstemp" name="firstemp" onchange="secondloading()">
+                    <option id="selectemp1" value="none" selected disabled hidden>Select an employee</option>
+                </select>
+            </div>
+            <div class="secondemployee">
+                <label id ="secondemplabel">Second Employee</label>
+                <select id="secondemp" name="secondemp">
+                    <option id="selectemp2" value="none" selected disabled hidden>Select an employee</option>
+                </select>
+            </div>
+            <div class="meeting">
+                <select id="meet" name="meet" >
+                    <option id="selectmeet" value="none" selected disabled hidden>Select a meeting</option>
+                    <option value="scrum">Scrum</option>
+                    <option value="grooming">grooming</option>
+                    <option value="architecturedesign">architecturedesign</option>
+                    <option value="uxdesign">uxdesign</option>
+                    <option value="payrollmeeting">payrollmeeting</option>
+                    <option value="funactivities">funactivities</option>
+                    <option value="securityanalysis">securityanalysis</option>
+                </select>
+            </div>
+
+            <div class = "submit">
+                <button type = "submit" id="submit" onclick="meetingvalidation()">schedule meeting</button>
+
+
+
+            </div>
+            <div class="schedulebutton">
+            </div>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
