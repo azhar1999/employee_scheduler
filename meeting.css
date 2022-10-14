@@ -1,27 +1,35 @@
-.firstbody{
-    display:flex;
+
+html{
+    background: rgba(0, 128, 0, 0.3)
+}
+
+.firstbody {
+    margin-top: 100px;
+    justify-content: center;
+    display: flex;
     flex-direction: row;
 }
 
-#secondemplabel{
+
+#secondemplabel {
     margin-left: 10px;
 
 }
 
-#firstemp{
+#firstemp {
     margin-left: 2px;
 }
 
-.meeting{
+.meeting {
     margin-left: 10px;
 }
 
-.submit{
+.submit {
 
-    background-color:red;
+    background-color: red;
     border: none;
     text-align: center;
-    margin-left:10px;
+    margin-left: 10px;
     opacity: 0.6;
     transition: 0.3s;
     display: inline-block;
@@ -29,5 +37,76 @@
     cursor: pointer;
 }
 
-.button:hover {opacity: 1}
+.button:hover {
+    opacity: 1
+}
 
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

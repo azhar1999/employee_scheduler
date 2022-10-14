@@ -83,7 +83,21 @@ function secondloading() {
 
 }
 
+function myFunction(result) {
+
+    var x = document.getElementById('snackbar');
+
+
+    x.innerHTML=result
+    
+
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+
 function meetingvalidation() {
+
+
     let emp1 = document.getElementById('firstemp').value
     let emp2 = document.getElementById('secondemp').value
     let meeting = document.getElementById('meet').value
@@ -91,6 +105,17 @@ function meetingvalidation() {
     var result = ""
     var flag = 0;
     var flag1=0;
+
+    if (emp1=="none" || emp2=="none"){
+        result ="please select an employee"
+        myFunction(result);
+        return;
+    }
+    if (meeting=="none"){
+        result ="please select a meeting"
+        myFunction(result);
+        return;
+    }
     for (var i = 0, l = empList.length; i < l; i++) {
         var options = empList[i];
         if (emp1 == options.empName) {
@@ -126,14 +151,10 @@ function meetingvalidation() {
 
     }
 
-    if (flag==1 && flag1 ==1){
-        document.getElementById('result').innerHTML="meeting can be scheduled";
 
-    }
 
-    else{
-        document.getElementById('result').innerHTML=result;
-    }
+    myFunction(result);
+    
 
     
 }
